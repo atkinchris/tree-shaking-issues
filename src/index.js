@@ -1,7 +1,7 @@
-import { Accessibility } from '@jsluna/icons'
+import { Cat } from './animals'
 
-function MyApplication() {
-  console.log(Accessibility)
+function Animals() {
+  console.log(Cat)
 }
 
-MyApplication()
+Animals()

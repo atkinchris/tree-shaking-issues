@@ -10,8 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@jsluna/icons": "^3.0.26",
-    "react": "^16.13.1",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"
   }
