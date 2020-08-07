@@ -10,6 +10,7 @@ module.exports = {
   externals: {
     react: 'react',
     recompose: 'recompose',
+    classnames: 'classnames',
   },
   // optimization: {
   //   concatenateModules: false,

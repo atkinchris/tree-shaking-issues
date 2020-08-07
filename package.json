@@ -10,6 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@jsluna/button": "^1.4.18",
+    "@jsluna/icons": "^3.0.26",
     "react": "^16.13.1",
     "recompose": "^0.30.0",
     "webpack": "^4.44.1",
