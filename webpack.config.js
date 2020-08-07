@@ -7,6 +7,10 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
+  externals: {
+    react: 'react',
+    recompose: 'recompose',
+  },
   // optimization: {
   //   concatenateModules: false,
   //   minimize: false,

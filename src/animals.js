@@ -1,4 +1,4 @@
-import identity from './identity'
+import { compose } from 'recompose'
 
 // Should be included in bundle
 function cat() {
@@ -7,8 +7,7 @@ function cat() {
 
 cat.noise = "meow"
 
-const Cat = identity(cat)
-
+const Cat = compose()(cat)
 
 // Should not be included in bundle, but will be as our test case
 function dog() {
@@ -17,7 +16,7 @@ function dog() {
 
 dog.noise = "woof"
 
-const Dog = identity(dog)
+const Dog = compose()(dog)
 
 // Should not be included in bundle, but will be because of static property assignment
 function cow() {
@@ -33,14 +32,13 @@ function horse() {
   return "🐎"
 }
 
-const Horse = identity(horse)
+const Horse = compose()(horse)
 
 // Will not be included in bundle, because no static property and PURE annotation for function call
 function sheep() {
   return "🐑"
 }
 
-const Sheep = /*#__PURE__*/identity(sheep)
-
+const Sheep = /*#__PURE__*/compose()(sheep)
 
 export { Cat, Dog, Cow, Horse, Sheep }
