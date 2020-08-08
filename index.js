@@ -44,6 +44,18 @@ async function test() {
   `)
 
   console.log('minifies with both static property and assignment', !result.code.includes('🐈'))
+
+  // Test Case: Failed
+  result = await minify(`
+    (function() {
+      function cat() { return "🐈" }
+      cat.noise = "meow"
+      cat.name = "Catrick"
+      // const Cat = cat
+    })()
+  `)
+
+  console.log('minifies with multiple static properties', !result.code.includes('🐈'))
 }
 
 test().catch(console.error)
