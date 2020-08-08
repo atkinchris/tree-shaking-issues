@@ -1,7 +1,7 @@
 import { Cat } from './animals'
 
 function Animals() {
-  console.log(Cat)
+  console.log(Cat.noise)
 }
 
 Animals()
